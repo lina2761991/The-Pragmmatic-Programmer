@@ -78,15 +78,14 @@ Advantages of tracer bullets:
 * 30+ weeks  -  months
 
 * think hard before giving an estimate
-
 * notes
 * Start keeping a log of your estimates. For each, track how accurate you turned out to be. If your error was greater than 50%, try to find out where your estimate went wrong.
 
 #### Estimating Project Schedules
-* The only way to determine the timetable for a project is by gaining experience on that same project. Practice incremental development, repeating the following steps:
+* The only way to determine the timetable for a project is by gaining experience on that same project. 
+* Practice incremental development, repeating the following steps:
    
-   
-   • Guess estimation
+    • Guess estimation
     • Check requirements
     • Analyse risk
     • Design, implement, integrate
@@ -126,6 +125,7 @@ Advantages of tracer bullets:
 * The program must run if all the exception handlers are removed If your code tries to open a file for reading and that file does not exist, should an exception be raised
 
     • Yes: If the file should have been there
+    
     • No: If you have no idea whether the file should exist or not
     
     
