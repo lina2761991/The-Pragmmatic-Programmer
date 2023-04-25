@@ -19,20 +19,21 @@
 * maintenance is always beig done, main thing is dont repeat your self (DRY) method
 * Try as much as possible to reduce the duplication and put things into functions to reuse them
 * sometimes 2 functions have different names but they do the same thing ,but the knoweldge they represent is different, this is not duplication, this is a coincidence
-often developers duplicate the same thing in the same project without knowing, thats why u have to pay attention on the daily scrum meeting , read ur collegue code and documentation and reuse it if its useful for you , generally if a code is easy to read and is reusuable then its a good code 
+* often developers duplicate the same thing in the same project without knowing, thats why u have to pay attention on the daily scrum meeting , read ur collegue code and documentation and reuse it if its useful for you , generally if a code is easy to read and is reusuable then its a good code 
 
 ## Orthogonality( decoupling)
 * non orthogonal is like a helicopter system , too complicated , whenever you touch just one simple thing , smthg else gets affected , the whole system is so interconnected and complex , you cant focus on fixing just one thing without the other
 * orthogonal systems, they are composed of elements that aren't inter-dependent on each other, the interfaces are linked but deep inside each element has its own structure, so if you wanna fix something you focus on just one thing, not the whole system
-### benefits of orthogonality:
-*  increase productivity and reduce risk
-* better to focus on small thing
-* re-usability
-* fix particular area, less spreading bad functionalities
+### Benefits of orthogonality:
 
-* you can do this tricky test to check your orthogonality; you say if I make a slight change in my system in a specific thing, how would this affect the entire thing 
-have the habit of refactoring 
-* orthogonality + Dry => flexible system
+        *  increase productivity and reduce risk
+        * better to focus on small thing
+        * re-usability
+        * fix particular area, less spreading bad functionalities
+        * you can do this tricky test to check your orthogonality; you say if I make a slight change in my system in a specific thing, how would this affect the entire thing 
+        have the habit of refactoring 
+        * orthogonality + Dry => flexible system
+
 ## Reversibility:
 * Be prepared for changes. 
 * Tip 14: There are no Final Decisions.
@@ -53,29 +54,33 @@ Advantages of tracer bullets:
     • You have a better feel for progress
 
 ### Prototyping
-*tracer code approach isn't the same as prototyping (target just one or 2 aspects of the project, not the whole thing, post it notes and drawing the user interface on white board are types of prototyping) while tracer bullet style is when u care  about the details
+* tracer code approach isn't the same as prototyping (target just one or 2 aspects of the project, not the whole thing
+* post it notes and drawing the user interface on white board are types of prototyping) while tracer bullet style is when u care  about the details
 * we use prototyping in these cases;
-*architecture – new functionalities in an existing system – user interface design 
-#### details to ignore in prototyping :
+* architecture – new functionalities in an existing system – user interface design 
+#### Details to ignore in prototyping :
+
 * correctness – completeness – robustness – style  
 * always remind whoever is seeing the prototype that this is not real, its just a prototype
+
 * => if you feel the prototype might be misleading, you better use the tracer bullet approach
+
 ### Estimating
 * What to Say When Asked for an Estimate
 * "I'll get back to you."
 * Scale time estimates properly
 
-Duration      Quote estimate in
+* Duration - Quote estimate in
 
-1-15 days     days
-3-8 weeks     weeks
-8-30 weeks    months
-30+ weeks     months
+* 1-15 days  -   days
+* 3-8 weeks   -  weeks
+* 8-30 weeks  -  months
+* 30+ weeks  -  months
 
 * think hard before giving an estimate
 
 * notes
-*Start keeping a log of your estimates. For each, track how accurate you turned out to be. If your error was greater than 50%, try to find out where your estimate went wrong.
+* Start keeping a log of your estimates. For each, track how accurate you turned out to be. If your error was greater than 50%, try to find out where your estimate went wrong.
 
 #### Estimating Project Schedules
 * The only way to determine the timetable for a project is by gaining experience on that same project. Practice incremental development, repeating the following steps:
@@ -96,15 +101,17 @@ Duration      Quote estimate in
 ### fluent in editing ; 
 * saves time between thinking and seing it appear   
 ###  version control; 
-*it givezs us the ability to go back in time in version control system and go back to any time of the project 
-*shared directory isnt vcs   (like putting the project on the cloud and everyone makes changes on it), every user needs to have his own version and update it (concept of branches)
+* it givezs us the ability to go back in time in version control system and go back to any time of the project 
+* shared directory isnt vcs   (like putting the project on the cloud and everyone makes changes on it), every user needs to have his own version and update it (concept of branches)
 
 
 # chapter4. Pragmatic paranoia
+
  #### DBC;
 * design by contract; simply enumerating wht the input range is, wht the boundary conditions are, wht the routine promises to deliver and wht it doesnt promise to deliver( its so important to use this technique its the opposite of programming by coincidence)
 * using assertions ;these are runtime checks
 * DBC and assert r used to validate pre conditions, post conditions and invariants
+
 #### Assertations 
 * they check for things that should never happen
 * dont turn off the assertation even in production , cuz even tests cant replace them even if u feel they make the program kinda heavy
@@ -123,6 +130,7 @@ Duration      Quote estimate in
     
     
 # chapter5.Bend or Break
+
 * write a flexible code that can be replaceable
 * Decoupling
 * coupling is the enemy of change
@@ -132,11 +140,13 @@ Duration      Quote estimate in
 * global data creates coupling (this Pb appears in unit testing)
 * global data includes singleton and external ressources 
 * => if its important enough to be global, wrap it in an api
+
 #### Jiggling the real world  
+
 * writing programs that are responsive to changes and needs 
 ## Events
 
-the 4 strategies that help with events ;
+* the 4 strategies that help with events ;
 
      1. finite state machine
      state machine is a sspecification how to handle events 
@@ -147,6 +157,7 @@ the 4 strategies that help with events ;
      4. reactive programming and streams
      
 #### transforming programming
+
 * some languages use pipelines like R %>% meaning the output of a line of code is the input of another
 * other languages that use OOP tend to do the same by creating object variables, sometimes we can use the “.” to call a function inner function inner function but this is not recommanded and its called train wreck( the code is this case in so coupled and hard to modify or manipulate)
 #### Inheritence Tax
