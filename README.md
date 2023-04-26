@@ -233,4 +233,4 @@ called also stress testing;making sure the software works under real world condi
 make the sure tests would catch the bugs if they happened for real
 
 # note : 
-## not a software engineer neither a software deveeloper but u r a problem solver
+## not a software engineer neither a software developer but u r a problem solver
